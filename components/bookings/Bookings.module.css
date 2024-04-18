@@ -1,0 +1,9 @@
+.cards_container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start; /* Align cards to the start or center as per design */
+	align-items: flex-start; /* Align items in each row */
+	gap: 20px; /* Spacing between cards */
+	padding: 30px 0;
+}

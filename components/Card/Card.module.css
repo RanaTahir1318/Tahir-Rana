@@ -1,0 +1,145 @@
+/* Card.module.css */
+.product_card {
+	background: #2d2d2d;
+	border: 1px solid #2d2d2d;
+	border-radius: 8px;
+	overflow: hidden;
+	transition: box-shadow 0.3s;
+	display: flex;
+	flex-direction: column;
+	width: 320px; /* Set maximum width */
+	color: #fff;
+}
+
+/* Card.module.css */
+.img_holder {
+	position: relative;
+	line-height: 0;
+	overflow: hidden; /* Ensure no part of the image overflows */
+}
+
+.img_holder img {
+	width: 100%; /* Maintain full width to fill container */
+	height: 140px; /* Fixed height for all images */
+	object-fit: cover; /* Cover the area of the container without losing aspect ratio */
+}
+
+.fav_icon {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.ico_heart_icon {
+	color: red;
+	font-size: 20px;
+}
+
+.card_inner {
+	padding: 15px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: #fff;
+	cursor: pointer;
+}
+
+.rating_bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.rating_tag {
+	color: #ff9500;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+
+.rating_value {
+	margin-right: 5px;
+}
+
+.ico_start-icon {
+	color: #ffda44;
+}
+
+.category {
+	background-color: #606df5;
+	padding: 5px 10px;
+	border-radius: 15px;
+	font-size: 12px;
+}
+.status {
+	padding: 5px 10px;
+	border-radius: 15px;
+	font-size: 12px;
+}
+
+.forward_arrow {
+	display: flex;
+	align-items: center;
+}
+
+.ico_slider-next-arrow {
+	font-size: 24px;
+	color: #ccc;
+}
+
+.card_descrip {
+	flex-grow: 1;
+}
+
+.card_descrip h3 {
+	margin: 0;
+	margin-bottom: 15px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.card_descrip p {
+	font-size: 14px;
+
+	margin: 5px 0 15px;
+	color: #fff;
+}
+
+.price_inf {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.price_inf .area {
+	font-size: 14px;
+	color: #fff;
+}
+
+.price_inf .pricing {
+	font-size: 18px;
+	font-weight: bold;
+	color: #4caf50;
+}
+
+@media (max-width: 768px) {
+	.responsive_card {
+		margin: 10px;
+	}
+
+	.card_inner {
+		padding: 10px;
+	}
+
+	.card_descrip h3 {
+		font-size: 16px;
+	}
+}

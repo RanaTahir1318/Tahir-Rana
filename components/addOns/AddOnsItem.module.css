@@ -1,0 +1,14 @@
+.addOnsContainer {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.addOnsCheckbox {
+	margin-right: 10px;
+}
+
+.addOnsLabel {
+	cursor: pointer;
+	user-select: none; /* Prevent text selection */
+}

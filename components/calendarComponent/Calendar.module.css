@@ -1,0 +1,26 @@
+.mainBox {
+	display: flex;
+	flex-direction: column;
+}
+.boxBody {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	gap: 10px;
+}
+
+.error {
+	color: red;
+	font-size: 12px;
+}
+
+.inputField {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
