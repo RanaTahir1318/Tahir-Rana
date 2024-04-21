@@ -13,11 +13,10 @@ export interface IBookingDetailsProps {
 	hotelId?: number;
 }
 export default function BookingDetails({hotelDetail, hotelId}: Readonly<IBookingDetailsProps>) {
-	console.log("hotelId", hotelId);
 	const [showModal, setShowModal] = useState<boolean>(false);
 	const [hotel, setHotel] = useState<IHotel>({} as IHotel);
-	console.log("hotel", hotel);
 	const {data: session} = useSession();
+
 	const myBookings = localStorage.getItem(`bookings_${session?.user?.email}`);
 
 	useEffect(() => {

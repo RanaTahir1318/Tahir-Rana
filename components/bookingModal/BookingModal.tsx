@@ -51,7 +51,7 @@ export default function BookingModal({hotelDetail, setShowModal}: Readonly<IBook
 		}
 
 		const isValidName = nameRef.current?.value !== "";
-		const isValidDate = dateRef.current?.value != "";
+		const isValidDate = dateRef.current?.value !== "";
 		const isValidCheckIn = validateCheckIn(checkInRef.current?.value ?? "", dateRef.current?.value ?? "");
 		const isValidCheckOut = validateCheckOut(checkInRef.current?.value!, checkOutRef.current?.value!);
 
@@ -75,9 +75,9 @@ export default function BookingModal({hotelDetail, setShowModal}: Readonly<IBook
 					card: cardElement,
 				});
 
-				if (paymentMethod?.created && hotelDetail ) {
+				if (paymentMethod?.created && hotelDetail) {
 					const paymentIntent = await stripe1.paymentIntents.create({
-						amount: parseInt(hotelDetail?.lowRate.toFixed(0)) ?? 0,
+						amount: Math.floor(Number(hotelDetail?.lowRate)) ?? 0,
 						currency: "usd",
 						payment_method_types: ["card"],
 						description: hotelDetail?.name,

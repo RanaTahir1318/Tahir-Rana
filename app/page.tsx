@@ -4,11 +4,18 @@ import {Card} from "@/components/Card/Card";
 import Bookings from "@/components/bookings/Bookings";
 import {getServerSession} from "next-auth";
 import {authOptions} from "./api/auth/[...nextauth]/options";
+import UsersComponent from "@/components/usersComponent/UsersComponent";
 
 export default async function Home() {
 	const session = await getServerSession(authOptions);
+
 	return (
 		<main className={style.main}>
+			{session && (
+				<div className={style.cards_container}>
+					<UsersComponent />
+				</div>
+			)}
 			{session && (
 				<div className={style.cards_container}>
 					<Bookings session={session} />
